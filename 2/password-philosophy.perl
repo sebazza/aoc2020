@@ -13,9 +13,8 @@ my $num_valid_second = 0, $num_invalid_second = 0;
 my $total = 0;
 while (<$in>) {
 	
-	if ( /^(\d+)-(\d+)\s(\w):\s(.+)$/) {
+	if (/^(\d+)-(\d+)\s(\w):\s(.+)$/) {
 
-     	#my $min = $1; $max = $2; $char = $3; $password = $4;
 		my $first = $1; $second = $2; $char = $3; $password = $4;
       	
       	# How many times does $char appear in $password?
@@ -45,7 +44,7 @@ while (<$in>) {
 print "First case:\n";
 print "$num_invalid passwords are invalid.\n";
 print "$num_valid password are valid\n";
-print "Second case\n";
+print "Second case:\n";
 print "$num_invalid_second passwords are invalid.\n";
 print "$num_valid_second password are valid\n";
 
